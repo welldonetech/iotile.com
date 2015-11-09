@@ -2,8 +2,14 @@
   <head>
     <title>Coming Soon 2016</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <script src="./js/bootstrap.min.js"></script>
+    <!--<script src="./js/bootstrap.min.js"></script>-->
     <style>
+      * {
+        margin: 0;
+      }
+      html, body {
+        height: 100%;
+      }
     	.centered {
     		text-align: center;
     	}
@@ -13,15 +19,20 @@
         padding: 50px;
       }
       div.main h1 {
-        size: 54px;
         color: #CCCCCC;
+      }
+      div.wrapper {
+        min-height: 100%;
+        height: auto !important;
       }
       div.bg > div.mask {
         width: 100%;
-        height: 100%;
-        background-image: url("paper.gif");
+        min-height: 100%;
+        height: auto;
         background-color: #000000;
-        position: absolute;
+        position: fixed;
+        top: 0px;
+        left:0px;
         opacity: 0.8;
         filter: alpha(opacity=80); /* For IE8 and earlier */
       }
@@ -39,18 +50,44 @@
         top: 0;
         left: 0;
       }
+      .footer, .push {
+        height: 4em;
+      }
       .footer {
-        position: absolute;
         width: 100%;
+        position: relative;
         bottom: 0px;
-        left: 0px;
         color: #CCCCCC;
-        margin-bottom: 10px;
       }
       .highlight {
         color: white;
         font-weight: bold;
       }
+      hr.divider {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+      }
+    </style>
+
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup{
+        background:none;
+        clear:left;
+        font:14px Helvetica,Arial,sans-serif;
+      }
+      #mc_embed_signup input {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      #mc_embed_signup input.email {
+        color: #333333;
+      }
+      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
   </head>
   <body>
@@ -58,16 +95,32 @@
       <img src="./bg.jpg" />
       <div class="mask"></div>
     </div>
-  	<div class="container">
-  		<div class="row">
-  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centered main">
-    		<h1>Hardware will never be the same.</h1>
-        <h4><span class="highlight">IOTile</span> - Coming Spring 2016</h4>
-    	</div>
-    	</div>
-    </div>
-    <div class="footer small centered">
-    Copyright &copy; 2015 WellDone Technology, Inc.
+    <div class="wrapper">
+    	<div class="container">
+    		<div class="row">
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centered main">
+      		<h1>Hardware will never be the same.</h1>
+          <h4><span class="highlight">IOTile</span> - Coming Spring 2016</h4>
+          
+          <hr class="divider" />
+          <!-- Begin MailChimp Signup Form -->
+  <div id="mc_embed_signup">
+  <form action="//wdt.us12.list-manage.com/subscribe/post?u=8b3346e5c6bb1c7604c677541&amp;id=0b91a8e550" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll" class="centered">
+    
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_8b3346e5c6bb1c7604c677541_0b91a8e550" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+  </form>
+  </div>
+
+  <!--End mc_embed_signup-->
+      	</div>
+      	</div>
+      </div>
+      <div class="footer small centered">Copyright &copy; 2015 WellDone Technology, Inc.</div>
     </div>
   </body>
 </html>
